@@ -1,0 +1,16 @@
+<%= form_for(@message) do |f| %>
+
+	<%= f.label "Recipient" %><br>
+
+	<input type="text" class="recipientInput form-control" name="recipients" data-role="tagsinput">
+	<div class="recipientInputMsg" style="color:red"></div><br>
+	<%= f.label :title %>
+	<%= f.text_field :title, class: "form-control" %><br>
+	<%= f.label :content %>
+	<%= f.text_area :content, class: "form-control", :cols=>20, :rows=>6%><br>
+	<%= f.label :attachment %>
+	<%= f.file_field :attachment, class: "form-control" %><br>
+
+	<%= f.submit class: "btn btn-primary" %>
+
+<% end %>

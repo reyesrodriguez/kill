@@ -1,0 +1,25 @@
+<div class="row taskshow" > 
+
+  <div class="col-md-12 col-md-offset-0">
+
+    <%= form_for @task, html: {multipart: true} do |f| %>
+      <%= f.label :title%><br>
+      <%= f.text_field :title, placeholder:'Title', class: "form-control"%><br>
+      <%= f.label :content%><br>
+      <%= f.text_area :content, placeholder: 'Content', class: "form-control", :cols=>20, :rows=>6%><br>
+      <%= f.label :duedate%><br>
+      <%= f.date_field :duedate, class: "form-control" %><br>
+      <%= f.label :address%><br>
+      <%= f.text_field :address, placeholder:'1 hart st, ny', class: "form-control"%><br>
+      <%= f.label :state%><br>
+      <%= f.text_field :state, placeholder:'State', class: "form-control"%><br>
+      <%= f.label :city%><br>
+      <%= f.text_field :city, placeholder:'Location', class: "form-control"%><br>
+      <%= f.label :image%><br>
+      <%= f.file_field :image, placeholder:'Attachment', class: "form-control"%><br>
+      <%= f.submit class: "btn btn-primary htn-lg" %>
+      <%= link_to "Cancel", current_user, class: "btn btn-default pull-right" %>
+    <% end %>
+
+</div>
+</div>

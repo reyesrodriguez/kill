@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-md-12">
+
+		<h1><%= @message.title %></h1><hr>
+
+		<h4><u>From:</u></h4>
+		<% if @sender %>
+			<p><%= User.find(@sender).name %></p>
+		<% else %>
+			<%= "Taskit Team" %>
+		<% end %>		
+
+		<h4><u>Content:</u></h4>
+		<div>
+			<%= @message.content.html_safe %>
+		</div><br>
+		
+		<h4><u>Attachment:</u></h4>
+		<% if @message.attachment != "no attach" %>
+			<%= @message.attachment %>
+		<% end %>			
+		<hr>
+
+	</div><br>
+
+	<!-- double check button sizing and color -->
+	
+	<div class="col-md-2 pull-right">
+		<a class="btn btn-primary htn-lg" href="/messages">Go Back</a>
+	</div>
+</div>

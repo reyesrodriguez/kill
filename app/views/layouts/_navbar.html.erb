@@ -1,0 +1,40 @@
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-style">
+<div class="container-fluid">	
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="/">Task Manager</a>
+    
+    <div class="hidden-xs hidden-sm">
+       	<% if logged_in? %>
+	        <ul class="nav navbar-nav">
+	        	<li><a href="/users/<%= current_user.id%>">Home</a></li>
+	        	<li><a href="/messages">Message Box</a></li>
+            </ul>
+
+        <% end %>
+    </div>
+    <div class="pull-right">
+      
+    	<% if logged_in? %>
+    		<span class="navbar-brand hidden-sm hidden-xs">Welcome, <%= current_user.name %></span>
+
+    		<span class="navbar-brand glyphicon glyphicon-log-out" style="margin-right:-13px" ></span>
+    		<%= link_to "logout", logout_path, method: :delete, class: "navbar-brand" %>
+
+    	<% else %>
+
+
+
+    		<a class="navbar-brand" href="/login">
+
+    			<span class="glyphicon glyphicon-log-in" style="margin-right:10px" ></span>Log In
+    		</a>
+    	<% end %>
+        </div>
+    </div>
+</div>
+
+
+
+</nav>	

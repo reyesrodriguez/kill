@@ -1,0 +1,226 @@
+/*custom css styles*/
+
+
+body {
+  padding-top: 70px;
+  margin: 0 10%;
+  color: #666666;
+}
+
+.taskDisplay {
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 10px;
+}
+.btn{
+  font-size: 1.3em;
+}
+.temp{
+  color: #296ACC;
+  font-size: 1em;
+}
+.weather{
+  font-size: 1.5em;
+}
+td{
+  padding: 10px;
+}
+.justify{
+  text-align: justify;
+  text-transform: none;
+}
+.wtext, .location{
+  margin: 10px 0;
+  color: #666666;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.content{
+  padding: 2% 2%;
+}
+
+h1,h2{
+  text-align: center;
+  color: #666666;
+}
+p{
+  font-size: 1.4em;
+}
+
+.task{
+  font-size: 1.2em;
+  color: #296ACC;
+  padding-left: 2%; 
+}
+.tasktitle{
+  text-align: center;
+}
+
+.col-md-2{
+  padding-left: 0;
+}
+.btn{
+  padding: 0;
+}
+#map-wrapper{
+  width: auto;
+  vertical-align: center;
+}
+/*.btn-primary{
+  width: auto;
+  padding: 5px;
+}*/
+
+/* new style*/
+.right{
+  float: right;
+  margin: 10px;
+}
+.left{
+  float: left;
+  margin: 10px;
+}
+.taskshow{
+  vertical-align: center;
+}
+.taskbutton, .modalbutton, .btn-primary{
+  color: white;
+  width: 100px;
+  padding: 5px;
+  text-decoration: none;
+  text-transform: bold;
+}
+
+#listDisplay{
+  width: auto;
+
+  height: 400px;
+  overflow: scroll;
+  border: none;
+}
+
+.taskDisplay{
+  margin: 10px;
+
+}
+
+.hidetext{
+  color: white;
+  vertical-align: center;
+  text-align: center;
+}
+footer{
+  text-align: center;
+  padding-top: 50px;
+  bottom: 0;
+  left: 0;
+  position: relative;
+}
+/******navbar*******/
+.navbar-header{
+  float: none;
+} 
+.navbar-style{
+   background-color: #290029;
+   border:none;
+    font-weight: 700px;
+    color: #FFFFFF;
+}
+
+
+/*******************************
+welcome users#index page styling
+********************************/
+@media screen and (min-width: 480px) {
+ .info-welcome {
+    font-weight: 600px;
+    left:16%;
+    top: 140px;
+    color:white;
+}
+.welcome {
+  margin-top: 1%;
+  font-weight: 800px;
+  font-size: 5.9vw;
+  color:white;
+}
+
+.info {
+  margin-top: 1px;
+  font-size: 3.9vmax;
+}
+
+}
+
+.background {
+  height: 720px;
+  background-image: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.info-welcome {
+    font-weight: 600px;
+    left:8%;
+    top: 190px;
+    color:white;
+}
+.welcome {
+  text-align: center;
+  margin-top: 1%;
+  font-weight: 800px;
+  font-size: 3.9vw;
+  color:white;
+}
+
+.info {
+  font-size: 3vmax;
+  text-align: center;
+  left: 10%;
+ 
+}
+
+
+.welcome-button {
+    position: relative;
+    text-align: center;
+    top: 198px;
+    left: 37%;
+    padding: 10px 44px;
+    border: 0 none;
+    font-weight: 600;
+
+    padding: 1% 5%;
+    margin-top: 1%;
+    top: 201px;
+    left: 39%;
+    right: -420px;
+    bottom: -191px;
+  
+    padding: 10px 44px;
+    border: 0 none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 3.9vw;
+    background:white;
+    color:grey;
+    opacity:0.8;
+    border: none;
+    width: auto;
+  
+}
+ 
+
+.btn-primary:hover  {
+
+  background-color: black;
+}
+
+
+.hidden {
+  visibility: hidden;
+
+}
