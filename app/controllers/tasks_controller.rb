@@ -50,9 +50,9 @@ class TasksController < ApplicationController
 
     # weather API
     state = @task.state
-    state.gsub(" ", "%20")
+    state.gsub!(" ", "_")
     city = @task.city
-    city.gsub(" ", "%20")
+    city.gsub!(" ", "_")
     response = HTTParty.get("http://api.wunderground.com/api/4a9cdbbd8fedfdc6/conditions/q/#{state}/#{city}.json")
  
     @weather_day = response["current_observation"]["temp_f"]
