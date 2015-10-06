@@ -77,7 +77,7 @@
 	}
 
 	function showMarker(task,map,bounds){
-		var address = task.address.replace(" ","+");
+		var address = task.city.replace(" ","+");
 		$.ajax({
 			type: "GET",
 			url: "https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&key=<%= ENV['GOOGLE_GEOCODE_API'] %>",
