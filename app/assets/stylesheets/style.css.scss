@@ -74,17 +74,17 @@ p{
 }*/
 
 /* new style*/
-.right{
+/*.right{
   float: right;
   margin: 10px;
 }
 .left{
   float: left;
   margin: 10px;
-}
-.taskshow{
+}*/
+/*.taskshow{
   vertical-align: center;
-}
+}*/
 .taskbutton, .modalbutton, .btn-primary{
   color: white;
   width: 100px;
@@ -99,11 +99,6 @@ p{
   height: 400px;
   overflow: scroll;
   border: none;
-}
-
-.taskDisplay{
-  margin: 10px;
-
 }
 
 .hidetext{
@@ -125,15 +120,15 @@ footer{
 .navbar-style{
    background-color: #290029;
    border:none;
-    font-weight: 700px;
-    color: #FFFFFF;
+   font-weight: 700px;
+   color: #FFFFFF;
 }
 
 
 /*******************************
 welcome users#index page styling
 ********************************/
-@media screen and (min-width: 480px) {
+
  .info-welcome {
     font-weight: 600px;
     left:16%;
@@ -152,7 +147,6 @@ welcome users#index page styling
   font-size: 3.9vmax;
 }
 
-}
 
 .background {
   height: 720px;

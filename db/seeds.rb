@@ -18,7 +18,7 @@ msgcontent = "<p>Thanks for taking to time to sign up with us!</p>"+
 	"<h4>Cheers!</h4>"+
 	"<p>The TaskIt Team</p>"
 
-a = User.create({name:"Reyes",email:"reyes@test.com",password:"reyes"})
+a = User.create({name:"guest",email:"guest@guest.com",password:"guest"})
 # b = User.create({name:"Xi",email:"xi@test.com",password:"xi"})
 # c = User.create({name:"Jackie",email:"jackie@test.com",password:"jackie"})
 # d = User.create({name:"Viki",email:"viki@test.com",password:"viki"})

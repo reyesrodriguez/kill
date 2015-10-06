@@ -8,17 +8,22 @@
                 <div class="row">
 
                   <!-- task content -->
-                  <div class="col-xs-8 col-sm-6">
-                    <p>Due date: <strong class="task"><%= @task.duedate%></strong></p>
-                    <p>Content: <strong class="task"><%= @task.content%></strong></p>
-                    <p>Address: <strong class="task"><%= @task.address%></strong></p>
+                  <div class="col-sm-12">
+                    <p>Record: <strong class="task"><%= @task.title%></strong></p>
+                    <p>Comments(label, etc..): <strong class="task"><%= @task.content%></strong></p>
+                     <p>Date since needed: <strong class="task"><%= @task.created_at%></strong></p>
+                        <% if @task.image_file_name == nil %>
+                             <p></p>
+                        <% else %>
+                            <p id="imgattached"><%= image_tag @task.image.url(:medium)%></p>
+                        <% end %>
                       
                   </div>
 
                   
-                  <div class="col-xs-4 col-sm-6" style="border-left: 1px solid rgba(0,0,0,0.1)">
+               
                         <!-- users lists on task -->
-                        <div class="col-sm-12" style="border-bottom: 1px solid rgba(0,0,0,0.1)">
+                   <!--      <div class="col-sm-12">
                             <h4>Users on This Task</h4><br>
                             <% @taskUsers.each do |taskUser| %>
                               <div class="taskDisplay">
@@ -27,18 +32,17 @@
                               </div>
                             <% end %>
                             <br>
-                        </div>
+                        </div> -->
 
                         <!-- weather display -->
-                        <div class="col-sm-12">
+                        <div class="col-lg-12">
                           <br><h4>Location and Weather</h4><br>
-                          <h5 class="location"><em class="task"><%= @task.city%></em></h5>
-                          <p class="hidetext">.<img src="<%= @weather_img%>"  valign="middle" class="wtext">
-                          <em class="temp"><%= @weather_day%> &#8457</em></p>
-                          <h5 class="justify">Today in <%= @task.city%>, weather is <%= @weather_feel %>, and it feels like <%= @weather_condition %></h5>
+                          <h5 ><%= @task.city%></h5>
+                          
+                          <%= @weather_day%>
+                          <h5>Today in <%= @task.city%>, weather is <%= @weather_feel %>, and it feels like <%= @weather_condition %></h5>
                         </div>                    
-                  </div>
-
+              
 
               </div> <!-- end of three sections -->
       

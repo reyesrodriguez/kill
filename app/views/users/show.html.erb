@@ -1,62 +1,55 @@
 <div class="row">
 
 			<div class="row">
-				<div class="col-md-9">
-					<h1>Task List</h1>
+				<div class="col-lg-12">
+					<h1>Record Bin</h1>
 				</div>
-				<div class="col-md-3" style="padding-top:20px">
-					<a class="btn btn-primary btn-lg pull-right"  href="/tasks/new">New Task</a>
 				</div>
-			</div><hr>
 
 			<div class="row">
-				<div class="col-md-9" id="searchArea">
+				<div class="col-md-4" id="searchArea">
 
 					  <%= form_tag user_path, :method => 'get' do %>
-					  	<div class="col-md-4">
-
-							<label for="search-by">Search By</label>
-						    <select name="search_by" id="search-by">
+					  	<label for="search-by">Search By</label>
+									<select name="search_by" id="search-by">
 						    		<option value="title">Title</option>
 						      	<option value="city">City</option>
 						      	<option value="address">Address</option>
 						      	<option value="content">Content</option>
-								</select>
-						</div>
-						<div class="col-md-6">
-	    					<%= text_field_tag :search, params[:search], class: "form-control"%>
-
-	  					</div>
-						<div class="col-md-2">
-	  						<%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
-	  					</div>
-					<% end %>
+									</select>
+						<%= text_field_tag :search, params[:search], class: "form-control"%><br>
+						<%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+	  				<% end %>
+				</div>
 				</div>
 
 
-				<div class="col-md-3 pull-right">
-					<span id="showList" style="padding-right:5px" >view as list</span>
-					<span id="showMap" style="border-left:1px solid rgba(0,0,0,0.3);padding-left:5px" class="btn btn-link">view on map</span>
+				<div class="row">
+				<div class="col-lg-12">
+					<span id="showList" >View as List</span>
+					<span id="showMap"  class="btn btn-link">View as Map</span>
+				</div><br>
 				</div>
-			</div>
 
-			<br><div id="listDisplay">
-
-				<% @tasks.each do |task| %>
-
-					<a href="/tasks/<%= task.id %>"><div class="taskDisplay">
-					Title: <%= task.title %><br>
-					Due Date: <%= task.duedate %><br>
+				<div class="row">
+				<div class="col-lg-12">
+					<a class="btn btn-primary btn-lg"  href="/tasks/new">New Want</a>
+					<div id="listDisplay">
+							<% @tasks.each do |task| %>
+							<a href="/tasks/<%= task.id %>">
+							<div class="taskDisplay">
+								Record Title: <%= task.title %><br>
+								Asking Price: <%= task.duedate %><br>
 					</div></a>
-				<% end %>
-
-			</div>
+							<% end %>
+				</div>
 
 			<div id="map-wrapper" style="display:none"> 
 				<div id="map" style='height: 400px;'></div>
 			</div>
 
-
+		</div>
+	</div>
 			<!-- pass task data from server to client, so javascript can handle that on map-->
 			<%= content_tag :div, class: "tasks_class", data: {tasks: @tasks} do %>
 			<% end %>
