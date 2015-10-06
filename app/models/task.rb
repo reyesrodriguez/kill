@@ -9,9 +9,9 @@ class Task < ActiveRecord::Base
   validates_attachment_size :image, :less_than => 2.megabytes
   validates_attachment_content_type :image, content_type: ["image/jpeg","image/jpg","image/png"]
 
-  validates :title, presence: true 
-  validates :content, presence: true
-  validates :duedate, presence: true
-  validates :state, presence: true
+  validates :title, presence: false 
+  validates :content, presence: false
+  validates :duedate, presence: false
+  validates :state, presence: false
 
 end

@@ -149,7 +149,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:title, :content, :duedate, :image, :state, :address, :city)
+    params.require(:task).permit(:title, :content, :image, :state, :city)
   end
 
   # def tasking_params

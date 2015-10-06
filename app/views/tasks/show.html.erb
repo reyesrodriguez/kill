@@ -1,21 +1,22 @@
-<div class="row taskshow" > 
-
-  <div class="col-sm-12">
-              <h2><%=@task.title%></h2><hr>
+<div class="col-lg-12">
+              <h2><%=@task.title%></h2>
 
 
                 <!-- three sections for content-->
-                <div class="row">
+                
 
                   <!-- task content -->
-                  <div class="col-sm-12">
-                    <p>Record: <strong class="task"><%= @task.title%></strong></p>
-                    <p>Comments(label, etc..): <strong class="task"><%= @task.content%></strong></p>
-                     <p>Date since needed: <strong class="task"><%= @task.created_at%></strong></p>
+                  <div class="col-lg-12 centered">
+                    <h3>Record:</h3>
+                      <p><strong class="task"><%= @task.title%></strong><p>
+                    <h3>Comments(label, etc..):</h3>
+                      <p><strong class="task"><%= @task.content%></strong></p>
+                    <h3>Date since needed:</h3>
+                      <p><strong class="task"><%= @task.created_at%></strong><p>
                         <% if @task.image_file_name == nil %>
                              <p></p>
                         <% else %>
-                            <p id="imgattached"><%= image_tag @task.image.url(:medium)%></p>
+                            <img id="imgattached"><%= image_tag @task.image.url(:medium)%></img>
                         <% end %>
                       
                   </div>
@@ -44,10 +45,10 @@
                         </div>                    
               
 
-              </div> <!-- end of three sections -->
+        <!-- end of three sections -->
       
               <!-- button container -->
-              <div class="col-sm-12"><hr>
+              <div class="col-lg-12"><hr>
                 <a href='/tasks/<%= @task.id%>/edit'><button type="button" class="btn btn-primary  taskbutton left">Edit</button></a>
 
                 <button type="button" class="btn btn-primary taskbutton right" data-toggle="modal" data-target="#myModal">Delete</button>
@@ -76,13 +77,14 @@
                 </div>
 
               </div>
+    </div>
     </div> <!-- end of col-sm-12 -->
 
-</div>
+
 
 <!-- select email to invite them to task -->
 <!-- <p>Input User's Email to Invite Them to Task</p> -->
-<!--
+<!-- 
 <%= form_tag task_path, :method => "get" do %>
   <%= label_tag :"Invite other user to join the task" %>
   <%= text_field :recipients, params[:recipients], class: "recipientInput form-control" %>

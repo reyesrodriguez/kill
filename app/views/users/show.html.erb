@@ -34,15 +34,15 @@
 				<div class="row">
 				<div class="col-lg-12">
 					<a class="btn btn-primary btn-lg"  href="/tasks/new">New Want</a>
-					<div id="listDisplay">
+				
 							<% @tasks.each do |task| %>
-							<a href="/tasks/<%= task.id %>">
+							
 							<div class="taskDisplay">
-								Record Title: <%= task.title %><br>
+								<a href="/tasks/<%= task.id %>">Record Title: <%= task.title %></a><br>
 								Asking Price: <%= task.duedate %><br>
-					</div></a>
+							</div>
 							<% end %>
-				</div>
+				
 
 			<div id="map-wrapper" style="display:none"> 
 				<div id="map" style='height: 400px;'></div>
